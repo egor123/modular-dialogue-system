@@ -12,7 +12,7 @@ The system is structured as a processing pipeline, where a shared `Data Containe
 
 ## Pipeline Architecture
 
-1. **Input & History**
+1. **Data Container**
    - The player input and dialogue history are added to the `Data Container`.
 
 2. **Preprocessing Module**
