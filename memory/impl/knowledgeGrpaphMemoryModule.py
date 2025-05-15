@@ -18,11 +18,10 @@ class KnowledgeGrpaphMemoryModule(MemoryModuleBase):
     def __populate_facts__(self, container: Container):
         for t in [container.input, *container.instructions]:
             for entity in self.extr.extract_entities(t):
-                return #FIXME
-                for dict in self.data.items():
+                for name, dict in self.data.items():
                     fact = dict.get(entity)
                     if fact != None:
-                        container.facts.append(fact)
+                        container.facts.append(str(fact))
 
     def __insert_facts__(self, container: Container):
         pattern = re.compile(r'\$\{(.*?)\}')
