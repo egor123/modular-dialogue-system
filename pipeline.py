@@ -3,18 +3,18 @@ from memory.memory import MemoryModuleBase
 from preprocessing.preprocessor import PreprocessorBase
 from flow.dialogue import DialogueFlowModuleBase
 from personality.personality import PersonalityModuleBase
-from output.processing import ProcessingModuleBase
+from generation.generation import GenerationModuleBase
 import logging
 from container import Container
 logger = logging.getLogger(__name__)
 
 
 class DialoguePipline:
-    def __init__(self, preprocessor: PreprocessorBase, dialogue: DialogueFlowModuleBase, personality: PersonalityModuleBase, memory: MemoryModuleBase, processing: ProcessingModuleBase):
+    def __init__(self, preprocessor: PreprocessorBase, dialogue: DialogueFlowModuleBase, personality: PersonalityModuleBase, memory: MemoryModuleBase, processing: GenerationModuleBase):
         self.preprocessor: PreprocessorBase = preprocessor
         self.dialogue: DialogueFlowModuleBase = dialogue
         self.personality: PersonalityModuleBase = personality
-        self.processing: ProcessingModuleBase = processing
+        self.processing: GenerationModuleBase = processing
         self.memory: MemoryModuleBase = memory
         self.history: list[str] = []
 

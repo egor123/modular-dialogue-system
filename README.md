@@ -4,13 +4,13 @@ This repository contains a modular, LLM-augmented dialogue system designed for t
 
 ---
 
-## 🧠 Overview
+## Overview
 
 The system is structured as a processing pipeline, where a shared `Data Container` is passed through a series of independent modules. Each module incrementally enriches the container with context, instructions, and personality traits. At the final stage, a large language model (LLM) generates a character-specific response using all collected data.
 
 ---
 
-## 🔧 Pipeline Architecture
+## Pipeline Architecture
 
 1. **Input & History**
    - The player input and dialogue history are added to the `Data Container`.
@@ -34,7 +34,7 @@ The system is structured as a processing pipeline, where a shared `Data Containe
 
 ---
 
-## 📦 Data Container Structure
+## Data Container Structure
 
 The `Data Container` acts as the shared mutable state. It includes:
 
@@ -48,7 +48,7 @@ The `Data Container` acts as the shared mutable state. It includes:
 
 ---
 
-## ⚙️ Configuration & Extensibility
+## Configuration
 
 - Each module is wrapped in a **standardized interface**, enabling flexible swapping of implementations.
 - All configurations (e.g., FSM logic, personality rules, world facts) are defined in **JSON** or **YAML** files.
@@ -57,7 +57,7 @@ The `Data Container` acts as the shared mutable state. It includes:
 ---
 
 
-## 📚 Use Cases
+## Use Cases
 
 - Role-playing games with free-text player input
 - Game AI prototypes needing controllable LLM behavior
@@ -65,15 +65,30 @@ The `Data Container` acts as the shared mutable state. It includes:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🧩 Modular and extensible architecture
-- 🎭 Personality-aware LLM responses
-- 🌍 Fact-grounded world state management
-- 🎮 Designed for immersive NPC interaction in games
+- Modular and extensible architecture
+- Personality-aware LLM responses
+- Fact-grounded world state management
+- Designed for immersive NPC interaction in games
 
 ---
 
-## 📄 License
+## License
 
-This project is part of a Bachelor’s thesis and is subject to the terms described in the accompanying license file.
+# Non-exclusive licence to reproduce the thesis and make the thesis public
+
+I, **Egor Lukjanenko**,  
+
+1. grant the University of Tartu a free permit (non-exclusive licence) to reproduce, for the purpose of preservation, including for adding to the digital archives of the University of Tartu until the expiry of the term of copyright, my thesis *Modular system for text-based interaction with non-player characters in game environments*, supervised by **Giacomo Magnifico**;
+
+2. grant the University of Tartu a permit to make the thesis specified in point 1 available to the public via the web environment of the University of Tartu, including via the digital archives, under the Creative Commons licence **CC BY-NC-ND 4.0**, which allows, by giving appropriate credit to the author, to reproduce, distribute the work and communicate it to the public, and prohibits the creation of derivative works and any commercial use of the work until the expiry of the term of copyright;
+
+3. am aware of the fact that the author retains the rights specified in points 1 and 2;
+
+4. confirm that granting the non-exclusive licence does not infringe other persons’ intellectual property rights or rights arising from the personal data protection legislation.
+
+<br>
+
+**Egor Lukjanenko**  
+15/05/2025

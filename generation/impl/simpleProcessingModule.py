@@ -1,11 +1,11 @@
 import logging
-from output.processing import ProcessingModuleBase
+from generation.generation import GenerationModuleBase
 from wrappers import LLMWrapper
 from container import Container
 
 logger = logging.getLogger(__name__)
 
-class SimpleProcessingModule(ProcessingModuleBase):
+class SimpleProcessingModule(GenerationModuleBase):
     def __init__(self, llm: LLMWrapper, history_limit: int = 5):
         self.llm = llm
         self.history_limit = history_limit

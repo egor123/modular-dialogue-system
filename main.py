@@ -11,7 +11,7 @@ from flow.impl.fsmDialogueFlowModule import FSMDialogueFlowModule
 from wrappers import SummarizationWrapper, EmbedderWrapper, SentimentWrapper, ExtractionWrapper, LLMWrapper, ParaphraserWrapper
 from personality.impl.simplePersonalityModule import SimplePersonalityModule
 from memory.impl.knowledgeGrpaphMemoryModule import KnowledgeGrpaphMemoryModule
-from output.impl.simpleProcessingModule import SimpleProcessingModule
+from generation.impl.simpleProcessingModule import SimpleProcessingModule
 from pipeline import DialoguePipline
 from transformers import pipeline
 from facts import FactSystem

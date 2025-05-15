@@ -5,7 +5,7 @@ from container import Container
 logger = logging.getLogger(__name__)
 
 
-class ProcessingModuleBase(ABC):
+class GenerationModuleBase(ABC):
     @abstractmethod
     def generate(container: Container) -> str:
         pass
