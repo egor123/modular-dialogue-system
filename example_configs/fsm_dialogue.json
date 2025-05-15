@@ -1,0 +1,56 @@
+{
+  "initial_state": "idle",
+  "states": {
+    "idle": {
+      "template": "Ask the player to help find a missing cat named Whiskers, mention it was last seen in the tavern",
+      "urgency": 0.6,
+      "freedom": 0.4,
+      "transitions": [
+        {
+          "to": "accepted",
+          "template": "Acknowledge the player's willingness to help and express appreciation",
+          "condition": "sim('user agrees to help')"
+        },
+        {
+          "to": "rejected",
+          "template": "Express disappointment or indifference at the player's refusal",
+          "condition": "sim('user refuses') or (sent('neg') > 0.7)"
+        }
+      ]
+    },
+    "accepted": {
+      "template": "Suggest possible cat locations such as the roof, fireplace, or near the well; imply cat is clever or sneaky",
+      "on_enter": "quest_started",
+      "urgency": 0.2,
+      "transitions": [
+        {
+          "to": "found_correct",
+          "template": "Confirm the guessed location as correct and praise the player",
+          "condition": "sim('user mentions roof')"
+        },
+        {
+          "to": "rejected",
+          "template": "React negatively to rudeness or mockery from the player",
+          "condition": "sent('neg') > 0.8"
+        }
+      ]
+    },
+    "rejected": {
+      "template": "Show disappointment, optionally ask if the player changed their mind",
+      "transitions": [
+        {
+          "to": "idle",
+          "template": "Acknowledge a change of heart and reintroduce the quest",
+          "condition": "sim('user apologizes') or (sent('pos') > 0.7)"
+        }
+      ]
+    },
+    "found_correct": {
+      "template": "Thank the player warmly, express relief and close the interaction positively",
+      "on_enter": "quest_completed",
+      "freedom": 1,
+      "urgency": 0,
+      "final": true
+    }
+  }
+}

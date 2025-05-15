@@ -1,0 +1,32 @@
+{
+  "characters": {
+    "Whiskers": {
+      "description": "black cat",
+      "favorite_spots": ["roof", "fireplace", "behind barrels"]
+    },
+    "Trollbrew Ale": {
+      "description": "Popular drink"
+    },
+    "The Rusty Tankard": {
+      "description": "Old tavern"
+    },
+    "Mira": {
+      "age": 32,
+      "occupation": "Healer",
+      "friends": ["Tavern Keeper"],
+      "enemies": []
+    },
+    "Brug": {
+      "age": 40,
+      "occupation": "Drunkard",
+      "friends": [],
+      "enemies": ["Guards"]
+    },
+    "Krell": {
+      "age": 29,
+      "occupation": "Thief",
+      "friends": ["Brug"],
+      "enemies": ["Tavern Keeper"]
+    }
+  }
+}
